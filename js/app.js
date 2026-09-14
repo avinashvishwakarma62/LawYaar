@@ -1180,6 +1180,304 @@ function initKeyboardShortcuts() {
 
         }
 
+/* =========================================================
+   10. HEADER & UI INTERACTIONS
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* =========================
+       DARK / LIGHT MODE
+       ========================= */
+
+    const themeToggle = document.getElementById("themeToggle");
+
+    if (themeToggle) {
+
+        const savedTheme = localStorage.getItem("lawyaar-theme");
+
+        if (savedTheme === "dark") {
+            document.body.classList.add("dark-mode");
+            updateThemeIcon(true);
+        }
+
+        themeToggle.addEventListener("click", () => {
+
+            document.body.classList.toggle("dark-mode");
+
+            const isDark =
+                document.body.classList.contains("dark-mode");
+
+            localStorage.setItem(
+                "lawyaar-theme",
+                isDark ? "dark" : "light"
+            );
+
+            updateThemeIcon(isDark);
+        });
+    }
+
+
+    function updateThemeIcon(isDark) {
+
+        if (!themeToggle) return;
+
+        themeToggle.innerHTML = isDark
+            ? '<i data-lucide="sun"></i>'
+            : '<i data-lucide="moon"></i>';
+
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    }
+
+
+    /* =========================
+       MOBILE MENU
+       ========================= */
+
+    const mobileMenuBtn =
+        document.getElementById("mobileMenuBtn");
+
+    const sidebar =
+        document.getElementById("sidebar");
+
+    if (mobileMenuBtn && sidebar) {
+
+        mobileMenuBtn.addEventListener("click", () => {
+
+            sidebar.classList.toggle("mobile-open");
+
+            const isOpen =
+                sidebar.classList.contains("mobile-open");
+
+            mobileMenuBtn.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+            mobileMenuBtn.innerHTML = isOpen
+                ? '<i data-lucide="x"></i>'
+                : '<i data-lucide="menu"></i>';
+
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+
+
+        /* Close menu after clicking navigation */
+
+        sidebar
+            .querySelectorAll(".nav-item")
+            .forEach((link) => {
+
+                link.addEventListener("click", () => {
+
+                    sidebar.classList.remove(
+                        "mobile-open"
+                    );
+
+                    mobileMenuBtn.innerHTML =
+                        '<i data-lucide="menu"></i>';
+
+                    if (window.lucide) {
+                        lucide.createIcons();
+                    }
+                });
+
+            });
+    }
+
+
+    /* =========================
+       HERO SEARCH
+       ========================= */
+
+    const heroSearch =
+        document.getElementById("heroSearch");
+
+    const heroSearchBtn =
+        document.getElementById("heroSearchBtn");
+
+    function performHeroSearch() {
+
+        if (!heroSearch) return;
+
+        const query =
+            heroSearch.value
+                .trim()
+                .toLowerCase();
+
+        if (!query) {
+
+            heroSearch.focus();
+
+            return;
+        }
+
+
+        /* Keyword mapping */
+
+        if (
+            query.includes("consumer") ||
+            query.includes("shopping") ||
+            query.includes("refund") ||
+            query.includes("product")
+        ) {
+
+            window.location.href =
+                "right-detail.html?topic=consumer";
+
+            return;
+        }
+
+
+        if (
+            query.includes("cyber") ||
+            query.includes("scam") ||
+            query.includes("fraud") ||
+            query.includes("online")
+        ) {
+
+            window.location.href =
+                "right-detail.html?topic=cyber";
+
+            return;
+        }
+
+
+        if (
+            query.includes("police") ||
+            query.includes("fir") ||
+            query.includes("complaint")
+        ) {
+
+            window.location.href =
+                "right-detail.html?topic=police";
+
+            return;
+        }
+
+
+        if (
+            query.includes("work") ||
+            query.includes("employee") ||
+            query.includes("workplace")
+        ) {
+
+            window.location.href =
+                "right-detail.html?topic=workplace";
+
+            return;
+        }
+
+
+        if (
+            query.includes("fundamental") ||
+            query.includes("constitution") ||
+            query.includes("constitutional")
+        ) {
+
+            window.location.href =
+                "right-detail.html?topic=fundamental";
+
+            return;
+        }
+
+
+        if (
+            query.includes("legal aid") ||
+            query.includes("lawyer") ||
+            query.includes("legal help")
+        ) {
+
+            window.location.href =
+                "right-detail.html?topic=legalaid";
+
+            return;
+        }
+
+
+        /* If nothing matches */
+
+        window.location.href =
+            "rights.html";
+    }
+
+
+    if (heroSearchBtn) {
+
+        heroSearchBtn.addEventListener(
+            "click",
+            performHeroSearch
+        );
+    }
+
+
+    if (heroSearch) {
+
+        heroSearch.addEventListener(
+            "keydown",
+            (event) => {
+
+                if (event.key === "Enter") {
+                    performHeroSearch();
+                }
+
+            }
+        );
+    }
+
+
+    /* =========================
+       LANGUAGE SELECTOR
+       ========================= */
+
+    const languageSelector =
+        document.querySelector(
+            ".language-selector"
+        );
+
+    if (languageSelector) {
+
+        languageSelector.addEventListener(
+            "click",
+            () => {
+
+                alert(
+                    "Language selection will be available soon. Currently LawYaar supports English."
+                );
+
+            }
+        );
+    }
+
+
+    /* =========================
+       USER PROFILE
+       ========================= */
+
+    const userProfile =
+        document.querySelector(".user-profile");
+
+    if (userProfile) {
+
+        userProfile.style.cursor = "pointer";
+
+        userProfile.addEventListener(
+            "click",
+            () => {
+
+                alert(
+                    "You are browsing LawYaar as a Guest User."
+                );
+
+            }
+        );
+    }
+
+});
 
         // Escape removes search focus
 
