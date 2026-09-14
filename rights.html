@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="LawYaar - Know Your Rights and understand legal rights in simple language">
+
+    <title>Know Your Rights | LawYaar</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-mark">⚖</div>
+
+            <div>
+                <div class="brand-name">LawYaar</div>
+
+                <div class="brand-subtitle">
+                    Your Friendly Legal Guide
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="nav-label">
+            MENU
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="index.html" class="nav-item">
+
+                <span class="nav-icon">⌂</span>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="rights.html" class="nav-item active">
+
+                <span class="nav-icon">⚖</span>
+
+                <span>Know Your Rights</span>
+
+            </a>
+
+
+            <a href="guides.html" class="nav-item">
+
+                <span class="nav-icon">▤</span>
+
+                <span>Legal Guides</span>
+
+            </a>
+
+
+            <a href="rights.html" class="nav-item">
+
+                <span class="nav-icon">⌕</span>
+
+                <span>Search Laws</span>
+
+            </a>
+
+
+            <a href="emergency.html" class="nav-item">
+
+                <span class="nav-icon">!</span>
+
+                <span>Emergency Help</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="nav-label">
+            LEARN
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="faq.html" class="nav-item">
+
+                <span class="nav-icon">?</span>
+
+                <span>FAQs</span>
+
+            </a>
+
+
+            <a href="quiz.html" class="nav-item">
+
+                <span class="nav-icon">✓</span>
+
+                <span>Legal Quiz</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html" class="nav-item">
+
+                <span class="nav-icon">←</span>
+
+                <span>Back to Dashboard</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="mobile-brand">
+                ⚖ LawYaar
+            </div>
+
+
+            <div class="top-search">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Search rights, laws, guides..."
+                    autocomplete="off"
+                >
+
+                <kbd>/</kbd>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button class="language-btn">
+                    EN
+                </button>
+
+
+                <button class="icon-btn">
+                    ♧
+                </button>
+
+
+                <div class="user-profile">
+
+                    <div class="user-avatar">
+                        C
+                    </div>
+
+                    <div class="user-details">
+
+                        <strong>Citizen</strong>
+
+                        <span>Guest User</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================= PAGE ================= -->
+
+        <div class="page">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <span class="eyebrow">
+                    CITIZEN AWARENESS
+                </span>
+
+                <h1>
+                    Know Your Rights
+                </h1>
+
+                <p>
+                    Understand important legal rights in simple,
+                    citizen-friendly language.
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= SEARCH / FILTER ================= -->
+
+            <section class="rights-toolbar">
+
+                <div>
+
+                    <span class="eyebrow">
+                        EXPLORE
+                    </span>
+
+                    <h2>
+                        Find the rights that matter to you
+                    </h2>
+
+                </div>
+
+
+                <div class="category-filters">
+
+                    <button
+                        class="filter-btn active"
+                        data-category="all">
+
+                        All
+
+                    </button>
+
+
+                    <button
+                        class="filter-btn"
+                        data-category="consumer">
+
+                        Consumer
+
+                    </button>
+
+
+                    <button
+                        class="filter-btn"
+                        data-category="cyber">
+
+                        Cyber
+
+                    </button>
+
+
+                    <button
+                        class="filter-btn"
+                        data-category="police">
+
+                        Police
+
+                    </button>
+
+
+                    <button
+                        class="filter-btn"
+                        data-category="work">
+
+                        Workplace
+
+                    </button>
+
+
+                    <button
+                        class="filter-btn"
+                        data-category="citizen">
+
+                        Citizen
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= RIGHTS GRID ================= -->
+
+            <section class="rights-grid" id="rightsGrid">
+
+
+                <!-- CARD 01 -->
+
+                <article
+                    class="right-card"
+                    data-category="consumer"
+                    data-search="consumer complaint consumer rights refund product">
+
+                    <div class="right-card-top">
+
+                        <div class="right-icon">
+                            🛒
+                        </div>
+
+                        <span class="topic-tag">
+                            CONSUMER
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Consumer Rights
+                    </h3>
+
+
+                    <p>
+                        Learn about basic rights when buying
+                        products or using services.
+                    </p>
+
+
+                    <div class="card-footer">
+
+                        <span>
+                            Learn the basics
+                        </span>
+
+                        <a href="right-detail.html?topic=consumer">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 02 -->
+
+                <article
+                    class="right-card"
+                    data-category="cyber"
+                    data-search="cyber crime online scam digital fraud cyber rights">
+
+                    <div class="right-card-top">
+
+                        <div class="right-icon">
+                            🔐
+                        </div>
+
+                        <span class="topic-tag">
+                            CYBER
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Digital & Cyber Rights
+                    </h3>
+
+
+                    <p>
+                        Understand basic awareness around
+                        online scams, fraud and digital safety.
+                    </p>
+
+
+                    <div class="card-footer">
+
+                        <span>
+                            Stay informed
+                        </span>
+
+                        <a href="right-detail.html?topic=cyber">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 03 -->
+
+                <article
+                    class="right-card"
+                    data-category="police"
+                    data-search="police complaint FIR police rights citizen">
+
+                    <div class="right-card-top">
+
+                        <div class="right-icon">
+                            👮
+                        </div>
+
+                        <span class="topic-tag">
+                            POLICE
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Police & Complaint Awareness
+                    </h3>
+
+
+                    <p>
+                        Learn general information about reporting
+                        concerns and interacting with authorities.
+                    </p>
+
+
+                    <div class="card-footer">
+
+                        <span>
+                            Know the process
+                        </span>
+
+                        <a href="right-detail.html?topic=police">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 04 -->
+
+                <article
+                    class="right-card"
+                    data-category="work"
+                    data-search="workplace employee rights salary harassment employment">
+
+                    <div class="right-card-top">
+
+                        <div class="right-icon">
+                            💼
+                        </div>
+
+                        <span class="topic-tag">
+                            WORKPLACE
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Workplace Rights
+                    </h3>
+
+
+                    <p>
+                        Explore basic awareness about workplace
+                        responsibilities, fairness and safety.
+                    </p>
+
+
+                    <div class="card-footer">
+
+                        <span>
+                            Workplace awareness
+                        </span>
+
+                        <a href="right-detail.html?topic=workplace">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 05 -->
+
+                <article
+                    class="right-card"
+                    data-category="citizen"
+                    data-search="citizen fundamental rights constitution equality freedom">
+
+                    <div class="right-card-top">
+
+                        <div class="right-icon">
+                            🇮🇳
+                        </div>
+
+                        <span class="topic-tag">
+                            CITIZEN
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Fundamental Rights
+                    </h3>
+
+
+                    <p>
+                        Get a beginner-friendly introduction to
+                        important constitutional rights.
+                    </p>
+
+
+                    <div class="card-footer">
+
+                        <span>
+                            Constitution basics
+                        </span>
+
+                        <a href="right-detail.html?topic=fundamental">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 06 -->
+
+                <article
+                    class="right-card"
+                    data-category="citizen"
+                    data-search="legal aid free legal help citizen assistance">
+
+                    <div class="right-card-top">
+
+                        <div class="right-icon">
+                            🤝
+                        </div>
+
+                        <span class="topic-tag">
+                            LEGAL AID
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Access to Legal Help
+                    </h3>
+
+
+                    <p>
+                        Understand where citizens can look for
+                        appropriate legal assistance and support.
+                    </p>
+
+
+                    <div class="card-footer">
+
+                        <span>
+                            Find support
+                        </span>
+
+                        <a href="right-detail.html?topic=legalaid">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 07 -->
+
+                <article
+                    class="right-card"
+                    data-category="consumer"
+                    data-search="online shopping refund replacement defective product">
+
+                    <div class="right-card-top">
+
+                        <div class="right-icon">
+                            📦
+                        </div>
+
+                        <span class="topic-tag">
+                            CONSUMER
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Online Shopping Awareness
+                    </h3>
+
+
+                    <p>
+                        Learn what information to keep when facing
+                        problems with an online purchase.
+                    </p>
+
+
+                    <div class="card-footer">
+
+                        <span>
+                            Shop smarter
+                        </span>
+
+                        <a href="right-detail.html?topic=online-shopping">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 08 -->
+
+                <article
+                    class="right-card"
+                    data-category="cyber"
+                    data-search="privacy data personal information internet safety">
+
+                    <div class="right-card-top">
+
+                        <div class="right-icon">
+                            🛡️
+                        </div>
+
+                        <span class="topic-tag">
+                            DIGITAL SAFETY
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Personal Data Awareness
+                    </h3>
+
+
+                    <p>
+                        Understand basic practices for protecting
+                        personal information online.
+                    </p>
+
+
+                    <div class="card-footer">
+
+                        <span>
+                            Protect yourself
+                        </span>
+
+                        <a href="right-detail.html?topic=data">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+
+            <!-- NO RESULTS -->
+
+            <div
+                class="no-results"
+                id="noResults"
+                style="display:none;">
+
+                <div class="no-results-icon">
+                    ⌕
+                </div>
+
+                <h3>
+                    No topics found
+                </h3>
+
+                <p>
+                    Try another search term or choose
+                    a different category.
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= INFO BANNER ================= -->
+
+            <section class="info-banner">
+
+                <div class="info-symbol">
+                    i
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Legal awareness starts with knowing your rights.
+                    </h3>
+
+                    <p>
+                        Explore topics in simple language and
+                        verify important information through
+                        official sources.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="guides.html"
+                    class="btn btn-primary">
+
+                    Explore Guides →
+
+                </a>
+
+            </section>
+
+
+
+            <!-- ================= DISCLAIMER ================= -->
+
+            <section class="warning-panel">
+
+                <strong>
+                    Important:
+                </strong>
+
+                LawYaar provides general educational and
+                legal-awareness information. It is not a
+                substitute for professional legal advice.
+
+            </section>
+
+
+
+            <!-- ================= FOOTER ================= -->
+
+            <footer class="footer">
+
+                <div>
+
+                    <strong>
+                        ⚖ LawYaar
+                    </strong>
+
+                    <span>
+                        Your Friendly Legal Guide
+                    </span>
+
+                </div>
+
+
+                <p>
+                    General awareness and educational
+                    information only.
+                </p>
+
+            </footer>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

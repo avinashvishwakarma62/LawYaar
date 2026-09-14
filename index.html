@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="LawYaar - Your Friendly Legal Guide. Understand your rights and legal information in simple language.">
+
+    <title>LawYaar — Your Friendly Legal Guide</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <!-- Brand -->
+        <div class="brand">
+
+            <div class="brand-logo">
+                <i data-lucide="scale"></i>
+            </div>
+
+            <div class="brand-text">
+                <div class="brand-name">
+                    Law<span>Yaar</span>
+                </div>
+
+                <div class="brand-subtitle">
+                    Your Friendly Legal Guide
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Main Navigation -->
+        <div class="nav-section">
+
+            <div class="nav-label">
+                MAIN MENU
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="index.html"
+                   class="nav-item active">
+
+                    <i data-lucide="layout-dashboard"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="rights.html"
+                   class="nav-item">
+
+                    <i data-lucide="scale"></i>
+
+                    <span>Know Your Rights</span>
+
+                </a>
+
+
+                <a href="guides.html"
+                   class="nav-item">
+
+                    <i data-lucide="book-open"></i>
+
+                    <span>Legal Guides</span>
+
+                </a>
+
+
+                <a href="rights.html"
+                   class="nav-item">
+
+                    <i data-lucide="search"></i>
+
+                    <span>Search Laws</span>
+
+                </a>
+
+
+                <a href="emergency.html"
+                   class="nav-item emergency-nav">
+
+                    <i data-lucide="siren"></i>
+
+                    <span>Emergency Help</span>
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Learning -->
+        <div class="nav-section">
+
+            <div class="nav-label">
+                LEARN
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="faq.html"
+                   class="nav-item">
+
+                    <i data-lucide="circle-help"></i>
+
+                    <span>FAQs</span>
+
+                </a>
+
+
+                <a href="quiz.html"
+                   class="nav-item">
+
+                    <i data-lucide="brain"></i>
+
+                    <span>Legal Quiz</span>
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Sidebar Bottom -->
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-help">
+
+                <div class="help-icon">
+                    <i data-lucide="headphones"></i>
+                </div>
+
+                <div>
+                    <strong>Need legal help?</strong>
+
+                    <span>
+                        Explore trusted resources
+                    </span>
+                </div>
+
+            </div>
+
+            <a href="emergency.html"
+               class="sidebar-emergency">
+
+                <i data-lucide="arrow-up-right"></i>
+
+                Emergency Support
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <!-- Mobile brand -->
+            <div class="mobile-brand">
+
+                <div class="brand-logo small">
+                    <i data-lucide="scale"></i>
+                </div>
+
+                <span>
+                    Law<span>Yaar</span>
+                </span>
+
+            </div>
+
+
+            <!-- Search -->
+            <div class="global-search">
+
+                <i data-lucide="search"></i>
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Search rights, laws, guides..."
+                    autocomplete="off"
+                >
+
+                <kbd>/</kbd>
+
+            </div>
+
+
+            <!-- Actions -->
+            <div class="topbar-actions">
+
+                <button
+                    class="topbar-icon"
+                    id="themeToggle"
+                    aria-label="Toggle theme">
+
+                    <i data-lucide="moon"></i>
+
+                </button>
+
+
+                <button class="language-selector">
+
+                    <span>EN</span>
+
+                    <i data-lucide="chevron-down"></i>
+
+                </button>
+
+
+                <div class="user-profile">
+
+                    <div class="user-avatar">
+                        C
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong>Citizen</strong>
+
+                        <span>Guest User</span>
+
+                    </div>
+
+                    <i data-lucide="chevron-down"
+                       class="user-chevron">
+                    </i>
+
+                </div>
+
+
+                <!-- Mobile menu -->
+                <button
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu">
+
+                    <i data-lucide="menu"></i>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             PAGE
+        ================================================== -->
+
+        <div class="page">
+
+            <!-- =================================================
+                 HERO
+            ================================================== -->
+
+            <section class="dashboard-hero">
+
+                <div class="hero-content">
+
+                    <div class="hero-badge">
+
+                        <span class="badge-dot"></span>
+
+                        LEGAL AWARENESS PLATFORM
+
+                    </div>
+
+
+                    <h1>
+                        Know Your Rights.
+                        <span>Know Your Power.</span>
+                    </h1>
+
+
+                    <p class="hero-description">
+
+                        Understand everyday laws, rights and legal
+                        processes in simple language — without
+                        complicated legal jargon.
+
+                    </p>
+
+
+                    <!-- Hero Search -->
+
+                    <div class="hero-search">
+
+                        <i data-lucide="search"></i>
+
+                        <input
+                            type="text"
+                            id="heroSearch"
+                            placeholder="What legal topic are you looking for?"
+                        >
+
+                        <button id="heroSearchBtn">
+
+                            Search
+
+                            <i data-lucide="arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="hero-suggestions">
+
+                        <span>Popular:</span>
+
+                        <a href="right-detail.html?topic=consumer">
+                            Consumer Rights
+                        </a>
+
+                        <a href="right-detail.html?topic=cyber">
+                            Cyber Crime
+                        </a>
+
+                        <a href="right-detail.html?topic=police">
+                            Police Rights
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hero Illustration -->
+
+                <div class="hero-visual">
+
+                    <div class="hero-glow"></div>
+
+                    <img
+                        src="images/hero-legal-awareness.png"
+                        alt="Legal awareness illustration"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 QUICK ACTIONS
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            QUICK ACCESS
+                        </span>
+
+                        <h2>
+                            Start with what you need
+                        </h2>
+
+                    </div>
+
+                    <a href="rights.html"
+                       class="section-link">
+
+                        View all
+
+                        <i data-lucide="arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="quick-grid">
+
+
+                    <!-- Rights -->
+                    <a href="rights.html"
+                       class="quick-card">
+
+                        <div class="quick-icon blue">
+
+                            <i data-lucide="shield-check"></i>
+
+                        </div>
+
+                        <div class="quick-content">
+
+                            <h3>
+                                Know Your Rights
+                            </h3>
+
+                            <p>
+                                Understand your basic legal rights
+                                as a citizen.
+                            </p>
+
+                        </div>
+
+                        <div class="quick-arrow">
+
+                            <i data-lucide="arrow-up-right"></i>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- Guides -->
+                    <a href="guides.html"
+                       class="quick-card">
+
+                        <div class="quick-icon purple">
+
+                            <i data-lucide="book-open"></i>
+
+                        </div>
+
+                        <div class="quick-content">
+
+                            <h3>
+                                Legal Guides
+                            </h3>
+
+                            <p>
+                                Simple step-by-step guides for
+                                common situations.
+                            </p>
+
+                        </div>
+
+                        <div class="quick-arrow">
+
+                            <i data-lucide="arrow-up-right"></i>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- Emergency -->
+                    <a href="emergency.html"
+                       class="quick-card danger-card">
+
+                        <div class="quick-icon red">
+
+                            <i data-lucide="siren"></i>
+
+                        </div>
+
+                        <div class="quick-content">
+
+                            <h3>
+                                Emergency Help
+                            </h3>
+
+                            <p>
+                                Find important emergency and
+                                support resources.
+                            </p>
+
+                        </div>
+
+                        <div class="quick-arrow">
+
+                            <i data-lucide="arrow-up-right"></i>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- Quiz -->
+                    <a href="quiz.html"
+                       class="quick-card">
+
+                        <div class="quick-icon green">
+
+                            <i data-lucide="brain"></i>
+
+                        </div>
+
+                        <div class="quick-content">
+
+                            <h3>
+                                Take Legal Quiz
+                            </h3>
+
+                            <p>
+                                Test your understanding of
+                                everyday legal awareness.
+                            </p>
+
+                        </div>
+
+                        <div class="quick-arrow">
+
+                            <i data-lucide="arrow-up-right"></i>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CATEGORIES
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            EXPLORE
+                        </span>
+
+                        <h2>
+                            Legal topics for everyday life
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-grid">
+
+
+                    <a href="rights.html?category=consumer"
+                       class="category-card">
+
+                        <div class="category-icon">
+                            <i data-lucide="shopping-bag"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Consumer Rights
+                            </h3>
+
+                            <p>
+                                Purchases, refunds & complaints
+                            </p>
+
+                        </div>
+
+                        <i data-lucide="arrow-up-right"
+                           class="category-arrow">
+                        </i>
+
+                    </a>
+
+
+                    <a href="rights.html?category=cyber"
+                       class="category-card">
+
+                        <div class="category-icon">
+                            <i data-lucide="shield-alert"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Cyber Safety
+                            </h3>
+
+                            <p>
+                                Online fraud & digital safety
+                            </p>
+
+                        </div>
+
+                        <i data-lucide="arrow-up-right"
+                           class="category-arrow">
+                        </i>
+
+                    </a>
+
+
+                    <a href="rights.html?category=police"
+                       class="category-card">
+
+                        <div class="category-icon">
+                            <i data-lucide="badge"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Police & FIR
+                            </h3>
+
+                            <p>
+                                Reporting & basic procedures
+                            </p>
+
+                        </div>
+
+                        <i data-lucide="arrow-up-right"
+                           class="category-arrow">
+                        </i>
+
+                    </a>
+
+
+                    <a href="rights.html?category=property"
+                       class="category-card">
+
+                        <div class="category-icon">
+                            <i data-lucide="house"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Property Rights
+                            </h3>
+
+                            <p>
+                                Documents & ownership basics
+                            </p>
+
+                        </div>
+
+                        <i data-lucide="arrow-up-right"
+                           class="category-arrow">
+                        </i>
+
+                    </a>
+
+
+                    <a href="rights.html?category=workplace"
+                       class="category-card">
+
+                        <div class="category-icon">
+                            <i data-lucide="briefcase-business"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Workplace Rights
+                            </h3>
+
+                            <p>
+                                Employees & workplace awareness
+                            </p>
+
+                        </div>
+
+                        <i data-lucide="arrow-up-right"
+                           class="category-arrow">
+                        </i>
+
+                    </a>
+
+
+                    <a href="rights.html?category=women"
+                       class="category-card">
+
+                        <div class="category-icon">
+                            <i data-lucide="heart-handshake"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Women & Child Safety
+                            </h3>
+
+                            <p>
+                                Protection & support resources
+                            </p>
+
+                        </div>
+
+                        <i data-lucide="arrow-up-right"
+                           class="category-arrow">
+                        </i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FEATURED GUIDE
+            ================================================== -->
+
+            <section class="featured-layout">
+
+                <div class="featured-guide">
+
+                    <div class="featured-top">
+
+                        <span class="featured-tag">
+                            FEATURED GUIDE
+                        </span>
+
+                        <i data-lucide="bookmark"></i>
+
+                    </div>
+
+
+                    <h2>
+                        What should you do after
+                        an online scam?
+                    </h2>
+
+
+                    <p>
+                        Learn the general steps you can consider
+                        after experiencing an online financial
+                        scam, including preserving information
+                        and finding appropriate support.
+                    </p>
+
+
+                    <a href="right-detail.html?topic=cyber"
+                       class="featured-button">
+
+                        Read Guide
+
+                        <i data-lucide="arrow-right"></i>
+
+                    </a>
+
+
+                    <div class="featured-meta">
+
+                        <span>
+                            <i data-lucide="clock-3"></i>
+                            5 min read
+                        </span>
+
+                        <span>
+                            <i data-lucide="circle-check"></i>
+                            Beginner friendly
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Awareness Card -->
+
+                <div class="awareness-card">
+
+                    <div class="awareness-icon">
+
+                        <i data-lucide="lightbulb"></i>
+
+                    </div>
+
+                    <span class="section-eyebrow">
+                        LAWYAAR TIP
+                    </span>
+
+                    <h3>
+                        Don't ignore the small details.
+                    </h3>
+
+                    <p>
+                        Keeping important documents,
+                        messages and transaction information
+                        organized can help you communicate
+                        your situation clearly.
+                    </p>
+
+                    <a href="guides.html">
+
+                        Explore more guides
+
+                        <i data-lucide="arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+            <section class="visual-section">
+
+    <div class="visual-card">
+        <img
+            src="images/citizen-rights-illustration.png"
+            alt="Citizen Rights Illustration"
+        >
+
+        <div class="visual-card-content">
+            <span class="eyebrow">KNOW YOUR RIGHTS</span>
+            <h2>Understand Your Rights</h2>
+            <p>
+                Learn about important rights and protections
+                available to citizens in simple language.
+            </p>
+            <a href="rights.html" class="btn btn-primary">
+                Explore Rights →
+            </a>
+        </div>
+    </div>
+
+
+    <div class="visual-card reverse">
+
+        <div class="visual-card-content">
+            <span class="eyebrow">LEGAL AWARENESS</span>
+            <h2>Legal Awareness Made Simple</h2>
+            <p>
+                Explore everyday legal topics, practical guides
+                and useful information without complicated jargon.
+            </p>
+            <a href="guides.html" class="btn btn-primary">
+                Explore Guides →
+            </a>
+        </div>
+
+        <img
+            src="images/legal-awareness-banner.png"
+            alt="Legal Awareness Banner"
+        >
+
+    </div>
+
+
+    <div class="visual-card">
+
+        <img
+            src="images/legal-awareness-learning.png"
+            alt="Legal Awareness Learning"
+        >
+
+        <div class="visual-card-content">
+            <span class="eyebrow">LEARN</span>
+            <h2>Learn. Understand. Act.</h2>
+            <p>
+                Improve your legal awareness through simple
+                explanations, FAQs and interactive quizzes.
+            </p>
+            <a href="quiz.html" class="btn btn-primary">
+                Take Legal Quiz →
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+            <!-- =================================================
+                 EMERGENCY BANNER
+            ================================================== -->
+
+            <section class="emergency-banner">
+
+                <div class="emergency-banner-icon">
+
+                    <i data-lucide="siren"></i>
+
+                </div>
+
+
+                <div class="emergency-banner-content">
+
+                    <span>
+                        NEED IMMEDIATE HELP?
+                    </span>
+
+                    <h2>
+                        Your safety comes first.
+                    </h2>
+
+                    <p>
+                        Access important emergency and support
+                        information in one place.
+                    </p>
+
+                </div>
+
+
+                <a href="emergency.html"
+                   class="emergency-button">
+
+                    Get Help
+
+                    <i data-lucide="arrow-right"></i>
+
+                </a>
+
+            </section>
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer class="footer">
+
+                <div class="footer-brand">
+
+                    <div class="footer-logo">
+
+                        <i data-lucide="scale"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Law<span>Yaar</span>
+                        </strong>
+
+                        <span>
+                            Your Friendly Legal Guide
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <a href="rights.html">
+                        Rights
+                    </a>
+
+                    <a href="guides.html">
+                        Guides
+                    </a>
+
+                    <a href="faq.html">
+                        FAQs
+                    </a>
+
+                    <a href="quiz.html">
+                        Quiz
+                    </a>
+
+                </div>
+
+
+                <p class="footer-disclaimer">
+
+                    General awareness and educational
+                    information only. Not a substitute for
+                    professional legal advice.
+
+                </p>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================== -->
+
+<script src="js/app.js"></script>
+
+<script>
+    /* Initialize Lucide icons */
+    lucide.createIcons();
+</script>
+
+</body>
+</html>

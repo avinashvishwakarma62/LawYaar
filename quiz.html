@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="LawYaar - Test your legal awareness with a simple interactive quiz.">
+
+    <title>Legal Quiz | LawYaar</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-mark">⚖</div>
+
+            <div>
+                <div class="brand-name">LawYaar</div>
+
+                <div class="brand-subtitle">
+                    Your Friendly Legal Guide
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="nav-label">
+            MENU
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="rights.html" class="nav-item">
+                <span class="nav-icon">⚖</span>
+                <span>Know Your Rights</span>
+            </a>
+
+            <a href="guides.html" class="nav-item">
+                <span class="nav-icon">▤</span>
+                <span>Legal Guides</span>
+            </a>
+
+            <a href="rights.html" class="nav-item">
+                <span class="nav-icon">⌕</span>
+                <span>Search Laws</span>
+            </a>
+
+            <a href="emergency.html" class="nav-item">
+                <span class="nav-icon">!</span>
+                <span>Emergency Help</span>
+            </a>
+
+        </nav>
+
+
+        <div class="nav-label">
+            LEARN
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="faq.html" class="nav-item">
+                <span class="nav-icon">?</span>
+                <span>FAQs</span>
+            </a>
+
+            <a href="quiz.html" class="nav-item active">
+                <span class="nav-icon">✓</span>
+                <span>Legal Quiz</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">←</span>
+                <span>Back to Dashboard</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="mobile-brand">
+                ⚖ LawYaar
+            </div>
+
+
+            <div class="top-search">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    placeholder="Search rights, laws, guides..."
+                    aria-label="Search"
+                >
+
+                <kbd>/</kbd>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button class="language-btn">
+                    EN
+                </button>
+
+                <button class="icon-btn">
+                    ♧
+                </button>
+
+
+                <div class="user-profile">
+
+                    <div class="user-avatar">
+                        C
+                    </div>
+
+                    <div class="user-details">
+
+                        <strong>Citizen</strong>
+
+                        <span>Guest User</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================= PAGE ================= -->
+
+        <div class="page">
+
+
+            <!-- QUIZ HERO -->
+
+            <section class="quiz-intro">
+
+                <div class="quiz-intro-content">
+
+                    <span class="eyebrow light">
+                        LEARN BY TESTING
+                    </span>
+
+
+                    <h1>
+                        How much do you know
+                        about your legal rights?
+                    </h1>
+
+
+                    <p>
+                        Test your basic understanding of
+                        everyday legal awareness with this
+                        short beginner-friendly quiz.
+                    </p>
+
+
+                    <div class="quiz-stats">
+
+                        <div class="quiz-stat">
+
+                            <strong>
+                                05
+                            </strong>
+
+                            <span>
+                                Questions
+                            </span>
+
+                        </div>
+
+
+                        <div class="quiz-stat">
+
+                            <strong>
+                                05
+                            </strong>
+
+                            <span>
+                                Minutes
+                            </span>
+
+                        </div>
+
+
+                        <div class="quiz-stat">
+
+                            <strong>
+                                Easy
+                            </strong>
+
+                            <span>
+                                Difficulty
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quiz-hero-icon">
+                    ✓
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= QUIZ BOX ================= -->
+
+            <section class="quiz-box">
+
+
+                <!-- QUIZ HEADER -->
+
+                <div class="quiz-top">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            LEGAL AWARENESS QUIZ
+                        </span>
+
+                        <span
+                            id="quizProgress"
+                            class="quiz-progress"
+                        >
+                            Question 1 of 5
+                        </span>
+
+                    </div>
+
+
+                    <div class="quiz-score">
+
+                        <span>
+                            SCORE
+                        </span>
+
+                        <strong id="quizScore">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROGRESS BAR -->
+
+                <div class="quiz-progress-bar">
+
+                    <div
+                        class="quiz-progress-fill"
+                        id="quizProgressFill"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- QUESTION -->
+
+                <div class="quiz-question">
+
+                    <span class="eyebrow">
+                        QUESTION
+                    </span>
+
+
+                    <h2 id="questionText">
+                        Loading question...
+                    </h2>
+
+                </div>
+
+
+
+                <!-- OPTIONS -->
+
+                <div
+                    class="quiz-options"
+                    id="quizOptions"
+                >
+                </div>
+
+
+
+                <!-- FEEDBACK -->
+
+                <div
+                    class="quiz-feedback"
+                    id="quizFeedback"
+                >
+                </div>
+
+
+
+                <!-- NEXT BUTTON -->
+
+                <button
+                    class="btn btn-primary quiz-next"
+                    id="nextQuestion"
+                    style="display:none;"
+                >
+                    Next Question →
+                </button>
+
+
+
+                <!-- RESULT -->
+
+                <div
+                    class="quiz-result"
+                    id="quizResult"
+                    style="display:none;"
+                >
+
+                    <div class="result-icon">
+                        ✓
+                    </div>
+
+
+                    <span class="eyebrow">
+                        QUIZ COMPLETE
+                    </span>
+
+
+                    <h2>
+                        Great job!
+                    </h2>
+
+
+                    <p id="finalScore">
+                    </p>
+
+
+                    <div class="result-actions">
+
+                        <button
+                            class="btn btn-primary"
+                            id="restartQuiz"
+                        >
+                            Try Again
+                        </button>
+
+
+                        <a
+                            href="rights.html"
+                            class="btn btn-secondary"
+                        >
+                            Explore Rights
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= LEARNING NOTE ================= -->
+
+            <section class="quiz-learning-card">
+
+                <div class="learning-icon">
+                    💡
+                </div>
+
+
+                <div>
+
+                    <span class="eyebrow">
+                        KEEP LEARNING
+                    </span>
+
+
+                    <h3>
+                        Got an answer wrong?
+                    </h3>
+
+
+                    <p>
+                        Don't worry. The goal of this quiz is
+                        awareness, not memorisation. Explore
+                        our Legal Guides and Know Your Rights
+                        sections to learn more.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="guides.html"
+                    class="btn btn-primary"
+                >
+                    Explore Guides →
+                </a>
+
+            </section>
+
+
+
+            <!-- ================= DISCLAIMER ================= -->
+
+            <section class="warning-panel">
+
+                <div class="warning-icon">
+                    !
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Important notice
+                    </strong>
+
+
+                    <p>
+                        Quiz questions are designed for general
+                        educational awareness and should not be
+                        treated as legal advice.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= FOOTER ================= -->
+
+            <footer class="footer">
+
+                <div>
+
+                    <strong>
+                        ⚖ LawYaar
+                    </strong>
+
+                    <span>
+                        Your Friendly Legal Guide
+                    </span>
+
+                </div>
+
+
+                <p>
+                    General awareness and educational
+                    information only.
+                </p>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+
+<!-- ================= QUIZ JAVASCRIPT ================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const questions = [
+
+        {
+            question:
+                "Why is it important to understand your basic legal rights?",
+
+            options: [
+                "Only lawyers need to know them",
+                "They help citizens make informed decisions",
+                "They are useful only in court",
+                "They replace professional legal advice"
+            ],
+
+            answer: 1,
+
+            explanation:
+                "Basic legal awareness can help citizens understand situations and make more informed decisions."
+        },
+
+
+        {
+            question:
+                "What should you generally do with important legal documents?",
+
+            options: [
+                "Delete them after reading",
+                "Share them publicly",
+                "Keep them safely and organized",
+                "Ignore them unless a problem occurs"
+            ],
+
+            answer: 2,
+
+            explanation:
+                "Keeping important documents safely organized can make them easier to access when needed."
+        },
+
+
+        {
+            question:
+                "What is a good step after experiencing an online scam?",
+
+            options: [
+                "Delete all evidence immediately",
+                "Preserve relevant information",
+                "Share your password with strangers",
+                "Ignore the incident completely"
+            ],
+
+            answer: 1,
+
+            explanation:
+                "Preserving relevant messages, transaction details and other information may be useful when seeking appropriate support."
+        },
+
+
+        {
+            question:
+                "Where should important legal information be verified?",
+
+            options: [
+                "Random social media comments",
+                "Unverified messages",
+                "Official or authoritative sources",
+                "Anonymous online posts"
+            ],
+
+            answer: 2,
+
+            explanation:
+                "Important legal information should be checked against authoritative government, court or other official sources."
+        },
+
+
+        {
+            question:
+                "What does LawYaar primarily provide?",
+
+            options: [
+                "Court representation",
+                "Guaranteed legal outcomes",
+                "General legal awareness and education",
+                "Personal legal representation"
+            ],
+
+            answer: 2,
+
+            explanation:
+                "LawYaar is designed as an educational legal-awareness platform and does not replace qualified professional advice."
+        }
+
+    ];
+
+
+    let currentQuestion = 0;
+    let score = 0;
+    let answered = false;
+
+
+    const questionText =
+        document.getElementById("questionText");
+
+    const quizOptions =
+        document.getElementById("quizOptions");
+
+    const quizFeedback =
+        document.getElementById("quizFeedback");
+
+    const nextButton =
+        document.getElementById("nextQuestion");
+
+    const quizProgress =
+        document.getElementById("quizProgress");
+
+    const quizScore =
+        document.getElementById("quizScore");
+
+    const progressFill =
+        document.getElementById("quizProgressFill");
+
+    const quizResult =
+        document.getElementById("quizResult");
+
+    const finalScore =
+        document.getElementById("finalScore");
+
+    const restartButton =
+        document.getElementById("restartQuiz");
+
+
+    function loadQuestion() {
+
+        answered = false;
+
+        const question =
+            questions[currentQuestion];
+
+
+        questionText.textContent =
+            question.question;
+
+
+        quizOptions.innerHTML = "";
+
+        quizFeedback.innerHTML = "";
+
+        quizFeedback.className =
+            "quiz-feedback";
+
+
+        nextButton.style.display =
+            "none";
+
+
+        quizProgress.textContent =
+            "Question " +
+            (currentQuestion + 1) +
+            " of " +
+            questions.length;
+
+
+        quizScore.textContent =
+            score;
+
+
+        const progress =
+            ((currentQuestion) /
+            questions.length) * 100;
+
+
+        if (progressFill) {
+
+            progressFill.style.width =
+                progress + "%";
+
+        }
+
+
+        question.options.forEach(
+            function (option, index) {
+
+                const button =
+                    document.createElement("button");
+
+
+                button.className =
+                    "quiz-option";
+
+
+                button.innerHTML =
+                    `
+                    <span class="option-letter">
+                        ${String.fromCharCode(65 + index)}
+                    </span>
+
+                    <span class="option-text">
+                        ${option}
+                    </span>
+                    `;
+
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        selectAnswer(
+                            index,
+                            button
+                        );
+
+                    }
+                );
+
+
+                quizOptions.appendChild(button);
+
+            }
+        );
+
+    }
+
+
+    function selectAnswer(
+        selectedIndex,
+        selectedButton
+    ) {
+
+        if (answered) return;
+
+        answered = true;
+
+
+        const question =
+            questions[currentQuestion];
+
+
+        const optionButtons =
+            document.querySelectorAll(
+                ".quiz-option"
+            );
+
+
+        optionButtons.forEach(
+            function (button, index) {
+
+                button.disabled = true;
+
+
+                if (
+                    index ===
+                    question.answer
+                ) {
+
+                    button.classList.add(
+                        "correct"
+                    );
+
+                }
+
+            }
+        );
+
+
+        if (
+            selectedIndex ===
+            question.answer
+        ) {
+
+            score++;
+
+            selectedButton.classList.add(
+                "correct"
+            );
+
+
+            quizFeedback.innerHTML =
+                `
+                <strong>Correct ✓</strong>
+                <span>
+                    ${question.explanation}
+                </span>
+                `;
+
+
+            quizFeedback.classList.add(
+                "success"
+            );
+
+        } else {
+
+            selectedButton.classList.add(
+                "wrong"
+            );
+
+
+            quizFeedback.innerHTML =
+                `
+                <strong>Not quite.</strong>
+                <span>
+                    ${question.explanation}
+                </span>
+                `;
+
+
+            quizFeedback.classList.add(
+                "error"
+            );
+
+        }
+
+
+        quizScore.textContent =
+            score;
+
+
+        nextButton.style.display =
+            "inline-flex";
+
+    }
+
+
+    function showResult() {
+
+        document.querySelector(
+            ".quiz-question"
+        ).style.display = "none";
+
+
+        quizOptions.style.display =
+            "none";
+
+
+        quizFeedback.style.display =
+            "none";
+
+
+        nextButton.style.display =
+            "none";
+
+
+        quizResult.style.display =
+            "block";
+
+
+        if (progressFill) {
+
+            progressFill.style.width =
+                "100%";
+
+        }
+
+
+        const percentage =
+            Math.round(
+                (score /
+                questions.length) *
+                100
+            );
+
+
+        let message = "";
+
+
+        if (percentage === 100) {
+
+            message =
+                "Excellent! You have a strong basic understanding of legal awareness.";
+
+        } else if (percentage >= 60) {
+
+            message =
+                "Good work! Keep exploring LawYaar to strengthen your legal awareness.";
+
+        } else {
+
+            message =
+                "Good start! Explore the Legal Guides and try the quiz again.";
+
+        }
+
+
+        finalScore.innerHTML =
+            `
+            You scored
+            <strong>${score}/${questions.length}</strong>
+            (${percentage}%).
+            <br><br>
+            ${message}
+            `;
+
+    }
+
+
+    nextButton.addEventListener(
+        "click",
+        function () {
+
+            currentQuestion++;
+
+
+            if (
+                currentQuestion >=
+                questions.length
+            ) {
+
+                showResult();
+
+            } else {
+
+                loadQuestion();
+
+            }
+
+        }
+    );
+
+
+    restartButton.addEventListener(
+        "click",
+        function () {
+
+            currentQuestion = 0;
+
+            score = 0;
+
+            quizResult.style.display =
+                "none";
+
+
+            document.querySelector(
+                ".quiz-question"
+            ).style.display = "block";
+
+
+            quizOptions.style.display =
+                "grid";
+
+
+            quizFeedback.style.display =
+                "block";
+
+
+            loadQuestion();
+
+        }
+    );
+
+
+    loadQuestion();
+
+});
+
+</script>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
