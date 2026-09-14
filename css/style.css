@@ -1835,3 +1835,90 @@ a {
     }
 
 }
+
+/* ================================
+   MOBILE RESPONSIVE FIX
+================================ */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visual-card img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .main {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .page {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 24px 16px;
+    }
+
+    .topbar {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .top-search {
+        max-width: 100%;
+    }
+
+    .top-search input {
+        max-width: 180px;
+    }
+
+    /* Hero image */
+    .hero-image,
+    .hero img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    /* Visual cards */
+    .visual-section {
+        width: 100%;
+    }
+
+    .visual-card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .visual-card.reverse {
+        flex-direction: column;
+    }
+
+    .visual-card img {
+        width: 100%;
+        height: auto;
+        max-height: 320px;
+        object-fit: cover;
+    }
+
+    .visual-card-content {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 24px;
+    }
+}
